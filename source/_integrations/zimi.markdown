@@ -3,7 +3,7 @@ title: Zimi Cloud Controller
 description: Access and control your Zimi Cloud Controller and its connected Zimi-based devices.
 featured: true
 ha_iot_class: Local Polling
-ha_release: 0.44
+ha_release: "2024.3.0"
 ha_codeowners:
   - '@markhannon'
 ha_category:
