@@ -61,6 +61,11 @@ You will be prompted to configure the gateway through the Home Assistant interfa
 If you see an "Unexpected error" message, restart the gateway and try again. Don't forget to assign a permanent IP address to your Zimi Cloud Controller on your router.
 </div>
 
+## Removing the integration
+
+This integration follows standard integration removal. No extra steps are required.
+
+{% include integrations/remove_device_service.md %}
 
 ## Troubleshooting
 
