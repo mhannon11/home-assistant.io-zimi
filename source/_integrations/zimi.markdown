@@ -2,10 +2,10 @@
 title: Zimi Cloud Controller
 description: Access and control your Zimi Cloud Controller and its connected Zimi-based devices.
 featured: false
-ha_iot_class: Local Polling
+ha_iot_class: Local Push
 ha_release: "2024.3.0"
 ha_codeowners:
-  - '@markhannon'
+  - '@markhannon', '@mhannon11'
 ha_category:
   - Cover
   - Fan
@@ -19,7 +19,32 @@ The Zimi integration allows you to connect your Zimi Cloud Controller to Home As
 
 (See https://zimi.life/ for details of the Zimi portfolio).
 
-The Zimi Cloud Controller can control compatible Zimi-based devices connected to it.
+Home Assistant can then be used to contoll all Zimi devices connected to the Zimi Cloud Controller.
+
+## Prerequisites
+
+A configured Zimi Cloud Connect and internet connection is needed for this integration to work.
+
+1. Open the app store and install the Zimi app.
+2. Open the Zimi app and configure a Zimi network by adding and naming all Zimi devices.
+3. Open the Zimi app and configure a Zimi Cloud Connect device. 
+4. Take a note of the Zimi Cloud Connect IP address and MAC address. 
+5. Configure the Zimi integration using standard configuration flow.
+
+{% include integrations/config_flow.md %}
+
+You will be prompted to configure the Zimi Cloud Connect through the Home Assistant interface. 
+
+{% configuration_basic %}
+host:
+    description: "The IP address of your Zimi Cloud Connect. You can find it via your router admin interface.    If no IP address is entered the integration will attempt to discover a Zimi Cloud Connect via a broadcast message on the local LAN."
+port:
+    description: "The port number used to connect to your Zimi Cloud Connect.   If no port number is entered the integration will use the default port.   (The default port will be correct in almost all deployment scenarios)"
+mac:
+    description: "The MAC address printed on the back of the Zimi Cloud Connect device.   This is a mandatory field and must be entered."
+{% endconfiguration_basic %}
+
+It is possible to add multiple Zimi Cloud Connect devices.
 
 ## Supported Devices
 
@@ -53,13 +78,16 @@ The following Zimi devices are not yet supported:
 
 - Zimi Matter Connect ([links to specifications](https://zimi.life/product/cloud-connect/))
 
-{% include integrations/config_flow.md %}
 
-You will be prompted to configure the gateway through the Home Assistant interface. The configuration process is very simple: when prompted, enter the your Zimi Cloud Controller IP and port, or leave the IP blank for auto-discovery on LAN.
 
-<div class='note'>
-If you see an "Unexpected error" message, restart the gateway and try again. Don't forget to assign a permanent IP address to your Zimi Cloud Controller on your router.
-</div>
+## Data updates
+
+The integration is pushed updates from the Zimi Cloud Controller instantly via the Zimi API.
+
+## Known limitations
+
+1. Updating the names of entities in the Zimi app after integration requires a HA restart to register the new names
+
 
 ## Removing the integration
 
