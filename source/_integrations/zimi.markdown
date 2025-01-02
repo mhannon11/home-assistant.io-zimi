@@ -19,7 +19,7 @@ The Zimi integration allows you to connect your Zimi Cloud Controller to Home As
 
 (See https://zimi.life/ for details of the Zimi portfolio).
 
-Home Assistant can then be used to contoll all Zimi devices connected to the Zimi Cloud Controller.
+Home Assistant can then be used to control all Zimi devices connected to the Zimi Cloud Controller.
 
 ## Prerequisites
 
@@ -99,7 +99,7 @@ This integration follows standard integration removal. No extra steps are requir
 
 ### Missing Zimi devices
 
-If there are missing Zimi devices after the initial integration, you may have to run thee discovery process again.
+If there are missing Zimi devices after the initial integration, you may have to run the discovery process again.
 
 To do this:
 
