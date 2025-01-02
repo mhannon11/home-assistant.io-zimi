@@ -108,9 +108,9 @@ This will re-run the discovery process.
 
 ### Device Authorization Failure
 
-Due to the authorization lifecycle of the Zimi Cloud Controller, the device implements rate limiting on authorization requests. If you exceed these limits 
-+(typically more than 3-5 requests within a few minutes), the device will temporarily reject new connection attempts. If you encounter this issue, you'll 
-+need to wait for the rate limit to reset.
+Due to the authorization lifecycle of the Zimi Cloud Controller, the device implements rate limiting on authorization requests. If you exceed these limits
+(typically more than 3-5 requests within a few minutes), the device will temporarily reject new connection attempts. If you encounter this issue, you'll
+need to wait for the rate limit to reset.
 
 To do this:
 
