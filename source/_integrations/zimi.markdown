@@ -16,11 +16,21 @@ ha_category:
 ha_domain: zimi
 ---
 
-The Zimi integration allows you to connect your Zimi Cloud Controller to Home Assistant.
+The Zimi integration allows you to connect your Zimi Cloud Controller to Home Assistant and via this integration control all of the local devices connected to the Zimi mesh.
 
 (See [Zimi's website](https://zimi.life/) for details of the Zimi portfolio).
 
-Home Assistant can then be used to control all Zimi devices connected to the Zimi Cloud Controller.
+## Supported Devices
+
+The following Zimi devices are supported:
+
+- Zimi Cloud Connect ([links to specifications](https://zimi.life/product/cloud-connect/))
+
+## Unsupported Devices
+
+The following Zimi devices are not yet supported:
+
+- Zimi Matter Connect ([links to specifications](https://zimi.life/product/cloud-connect/))
 
 ## Prerequisites
 
@@ -47,12 +57,6 @@ mac:
 
 It is possible to add multiple Zimi Cloud Connect devices.
 
-## Supported Devices
-
-The following Zimi devices are supported:
-
-- Zimi Cloud Connect ([links to specifications](https://zimi.life/product/cloud-connect/))
-
 ## Available Entities
 
 When you add a supported device, the following entities will be created:
@@ -73,11 +77,7 @@ When you add a supported device, the following entities will be created:
 
 - Switch entity: Basic on/off
 
-## Unsupported Devices
 
-The following Zimi devices are not yet supported:
-
-- Zimi Matter Connect ([links to specifications](https://zimi.life/product/cloud-connect/))
 
 ## Data updates
 
