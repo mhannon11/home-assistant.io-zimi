@@ -91,8 +91,6 @@ The integration is pushed updates from the Zimi Cloud Controller instantly via t
 
 This integration follows standard integration removal. No extra steps are required.
 
-{% include integrations/remove_device_service.md %}
-
 ## Troubleshooting
 
 ### Missing Zimi devices
