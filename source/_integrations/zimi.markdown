@@ -8,11 +8,7 @@ ha_codeowners:
   - '@markhannon'
   - '@mhannon11'
 ha_category:
-  - Cover
-  - Fan
   - Light
-  - Sensor
-  - Switch
 ha_domain: zimi
 ---
 
@@ -61,23 +57,9 @@ It is possible to add multiple Zimi Cloud Connect devices.
 
 When you add a supported device, the following entities will be created:
 
-### Zimi Cover Controller
-
-- Cover entity: Basic position control
-
-### Zimi Fan Controller
-
-- Fan entity: Basic on/off and speed control
-
 ### Zimi Light Controller
 
 - Light entity: Basic on/off and brightness control
-
-### Zimi Switch Controller
-
-- Switch entity: Basic on/off
-
-
 
 ## Data updates
 
